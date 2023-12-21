@@ -1,3 +1,15 @@
- cd TodoApp
-  npm install
+ 
+
+
+
+
+
+
+
+
+
+
+
+### To execute the application
+  cd TodoApp
   npm run dev

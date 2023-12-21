@@ -1,8 +1,13 @@
 import './Todo.css'
 
-function Todo(){
+function Todo({text, isFinished}){
     return(
-        <>Todo</>
+        <div>
+            <input type="checkbox" checked={isFinished}/>
+            <span> {text} </span>
+            <button> Edit </button>
+            <button> Delete </button>
+        </div>
     )
 }
 export default Todo;
