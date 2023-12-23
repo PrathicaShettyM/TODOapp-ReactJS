@@ -39,6 +39,32 @@ function TodoList({ todos }){
 ```
  <TodoList todos={todos}/>
 ```
+4. create a new component `AddTodo` with an `AddTodo` function, which takes an event `onChange` (event) which sets `setTodoText()` method which takes the input value `(event.target.value)` and `value` is set to `todoText` 
+```
+function AddTodo({addTodos}){
+    
+    const [todoText, setTodoText] = useState('');
+    
+    return(
+        <>
+            <input 
+            placeholder="Add your next todo ..."
+            onChange={(event) => setTodoText(event.target.value)}
+            value={todoText}   
+            />        
+
+            <button onClick={()=>{
+                addTodos(todoText);
+                setTodoText('')
+            }}>
+                    Submit
+            </button>
+        </>
+    )
+}
+```
+
+
 
 
 
