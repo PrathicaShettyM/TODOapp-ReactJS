@@ -1,5 +1,5 @@
  # Logic of the TodoApp
- 1.  TodoList function expects a todos array of todo list
+ 1.  TodoList function expects a todos `array of todo list`
  ```
  function TodoList({ todos }){
     return(
@@ -7,7 +7,7 @@
     )
 }
  ```
-2. The function Todo expects 2 props -> text, isFinished. Then return the components as shown below
+2. The function Todo expects 2 props -> `text`, `isFinished`. Then return the components as shown below
 ```
 function Todo({text, isFinished}){
     return(
@@ -64,7 +64,30 @@ function AddTodo({addTodos}){
     )
 }
 ```
+5. In the new function `addTodo()` it expects a parameter todoText. 
+- The setter function `setTodos()` expects an array, with previously set destructured todolist(...todos) along with a new object which expects all the todo Array components(id, isFinished, text)
+```
+function App() {
 
+  const [todos, setTodos] = useState([
+    {id: 1, text: 'todo 1', isFinished: true},
+    {id: 1, text: 'todo 1', isFinished: false}
+  ])
+
+  function addTodos(todoText){
+    let nextId = todos.length + 1;
+    setTodos([...todos, {id: nextId, isFinished: false, text: todoText}])
+  }
+
+  return (
+    <>
+      <AddTodo addTodos={addTodos}/>
+      <TodoList todos={todos}/>
+    </>
+  )
+}
+
+```
 
 
 
