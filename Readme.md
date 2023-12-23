@@ -40,6 +40,7 @@ function TodoList({ todos }){
  <TodoList todos={todos}/>
 ```
 4. create a new component `AddTodo` with an `AddTodo` function, which takes an event `onChange` (event) which sets `setTodoText()` method which takes the input value `(event.target.value)` and `value` is set to `todoText` 
+- For the `onClick()` event, set the "prop" `addTodo()` to `todoText` and set the function `setTodoText('')` as empty string
 ```
 function AddTodo({addTodos}){
     
