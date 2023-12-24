@@ -3,6 +3,7 @@ import './App.css'
 import AddTodo from './components/AddTodo/AddTodo'
 import TodoList from './components/TodoList/TodoList'
 
+
 function App() {
 
   const [todos, setTodos] = useState([
@@ -15,11 +16,12 @@ function App() {
     setTodos([...todos, {id: nextId, isFinished: false, text: todoText}])
   }
 
+ 
   return (
-    <>
+    <div>
       <AddTodo addTodos={addTodos}/>
-      <TodoList todos={todos}/>
-    </>
+      <TodoList todos={todos} setTodos={setTodos}/>
+    </div>
   )
 }
 
