@@ -6,10 +6,7 @@ import TodoContext from './context/TodoContext'
 
 function App() {
 
-  const [todos, setTodos] = useState([
-    {id: 1, text: 'todo 1', isFinished: true},
-    {id: 1, text: 'todo 1', isFinished: false}
-  ])
+  const [todos, setTodos] = useState([])
  
   return (
     <div>
