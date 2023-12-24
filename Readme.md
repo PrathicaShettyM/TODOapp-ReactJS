@@ -90,7 +90,14 @@ function App() {
 ```
 6. 
 
+ <TodoContext.Provider> : this is a special component and whichever component is wrapped inside it, all of these componets have access to todo context or the common todo decument
 
+   <TodoContext.Provider value={{todos, setTodos}}> 
+        <AddTodo addTodos={addTodos}/>
+        <TodoList todos={todos} setTodos={setTodos}/>
+      </TodoContext.Provider>
+      : now `{todos, setTodos}` is accessible by <AddTodo> and <TodoList>
+      hence we dont need any props in these 2 components
 
 
 

@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import Todo from '../Todo/Todo';
 import './TodoList.css'
+import TodoContext from '../../context/TodoContext';
 
-function TodoList({ todos, setTodos }){
+function TodoList(){
 
+    const {todos, setTodos} = useContext(TodoContext);
 
     function onDeleteTodo(id){
         // delete logic : create a new array which contains all the elements other than the one mentioned as "id" in the parameter
