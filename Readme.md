@@ -101,12 +101,25 @@ function App() {
 
 
 
-
-
-
-
-
-
 ### To execute the application
   cd TodoApp
   npm run dev
+
+
+### Reducer
+- It is a plain function
+- It takes 2 parameters: 
+1. It takes the `state` of an array or some part of state: todos
+2. takes `action`: Action is nothing but a simple plain js object
+
+- an object has: 
+- `type` and `payload`
+1. action property <string> type -> identify the task to be performed
+2. parameters needed to complete task will be stored in a property called `payload`: () another object
+```
+{
+  type: <String>
+  payload: ()
+}
+```
+- The reducer takes the `state` of the app and `action` of the app and returns a new state 
